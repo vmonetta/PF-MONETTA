@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Sacramento&display=swap');
+
+/*--------------------ESTILOS GENERALES--------------------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Oswald';
+    font-size: 12px;
+}
+
+/*Estilo de lista sin viñetas*/
+ul {
+    list-style: none;
+}
+
+/*Estilo de párrafo*/
+p {
+    font-family: 'Assistant';
+    font-size: 10px;
+    /*"Peso" de la fuente (grosor del texto)*/
+    font-weight: 300;
+    margin-top: 0%;
+}
+
+a {
+    text-decoration: none;
+    padding: 10px 8px 10px 8px;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(224, 249, 198);
+    font-weight: 500;
+}
+
+a:hover {
+    border: none;
+    border-bottom: 2px solid rgb(115, 156, 71);
+    color: rgb(115, 156, 71);
+    font-weight: 500;
+}
+
+input {
+    font-family: 'Assistant';
+    font-size: 10px;
+}
+
+#boton {
+    background-color: rgb(224, 249, 198);
+    color: rgb(115, 156, 71);
+    border: 2px solid rgb(115, 156, 71);
+    font-weight: 500;
+}
+
+#boton:hover {
+    border: 2px solid rgb(115, 156, 71);
+    background-color: rgb(115, 156, 71);
+    color: rgb(224, 249, 198);
+    font-weight: 500;
+}
+
+/*Estilo de texto h1*/
+h1 {
+    margin-bottom: 0%;
+    font-size: 14px;
+}
+
+/*Estilo de texto h2*/
+h2 {
+    margin-top: 0%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/*Estilo de texto h3*/
+h3 {
+    margin-bottom: 0%;
+}
+
+section img {
+    width: 100%;
+    grid-area: imagen;
+    
+}
+
+/*--------------------MOBILE--------------------*/
+#container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px auto 125px;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+/*--------------------ESTILOS POR BLOQUE--------------------*/
+/*----HEADER----*/
+header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "logo"
+        "nombreLogo"
+        "menu";
+    justify-items: center;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    grid-area: logo;
+}
+
+#nombreLogo {
+    grid-area: nombreLogo;
+    font-family: 'Sacramento';
+    font-size: 35px;
+    text-align: center;
+}
+
+nav {
+    grid-area: menu;
+    width: 100%;
+    justify-content: space-around;
+    padding: 0px 10px 0px 10px;
+    background-color: rgb(224, 249, 198);
+    height: 100%;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*----MAIN----*/
+/*INDEX*/
+.main--index {
+    grid-area: main;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /*grid-template-rows: 50% 50%;*/
+    grid-template-areas:
+        "bienvenida bienvenida"
+        "imagen cuadroSeccion";
+}
+
+.main__seccion--bienvenidaIndex {
+    grid-area: bienvenida;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url("../assets/images/portada-index.jpg");
+    height: max-content;
+    background-size: auto;
+    padding: 20px;
+}
+
+.main__seccion--cuadros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilos para los cuadros */
+.cuadro {
+    grid-area: cuadros;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+/*PLANTAS*/
+.main__seccion--bienvenidaPlantas{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+        "texto1 texto2"
+        "blanco blanco";
+    justify-content: baseline;    
+}
+
+.main__seccion--bienvenidaPlantas--h1{
+    grid-area: texto1;
+    text-align: right;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #000;
+}
+
+.main__seccion--bienvenidaPlantas--h2{
+    grid-area: texto2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*SEMILLAS*/
+.main__seccion--bienvenidaSemillas{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+        "texto1 texto2"
+        "blanco blanco";
+    justify-content: baseline;    
+}
+
+.main__seccion--bienvenidaSemillas--h1{
+    grid-area: texto1;
+    text-align: right;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #000;
+}
+
+.main__seccion--bienvenidaSemillas--h2{
+    grid-area: texto2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*CONTACTO*/
+.main--contacto {
+    grid-area: main;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 100%;
+    /*grid-template-rows: 50% 50%;*/
+    grid-template-areas:
+        "bienvenida"
+        "form";
+}
+
+.main__seccion--bienvenidaContacto {
+    grid-area: bienvenida;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 4px #000;
+    text-align: center;
+    background-image: url("../assets/images/portada-contacto.jpg");
+    background-size: cover;
+    padding: 20px;
+}
+
+.main__form {
+    grid-area: form;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Assistant';
+    font-size: 10px;
+    font-weight: 300;
+    justify-content: center;
+    padding: 20px;
+}
+
+/*NOSOTROS*/
+.main--nosotros {
+    grid-area: main;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+        "imagen texto"
+        "ubicacion ubicacion";
+}
+
+.main__seccion--parrafo{
+    grid-area: texto;
+    padding: 20px;
+}
+
+.main__seccion--ubicacion{
+    grid-area: ubicacion;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+}
+/*---FOOTER---*/
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/*Estilo de datos de contacto*/
+.footer__seccion--infoContacto {
+    background-color: rgb(224, 249, 198);
+    width: 100%;
+    text-align: center;
+    /*padding: 15px 15px 15px 15px;*/
+    color: rgb(92, 91, 91);
+}
+
+#infoContacto {
+    padding: 15px 15px 15px 15px;
+    margin: 0;
+}
+
+/*Estilo de copyright*/
+.footer__seccion--copyright {
+    width: 100%;
+    background-color: rgb(224, 249, 198);
+    text-align: center;
+    padding: 15px 15px 15px 15px;
+    color: rgb(92, 91, 91);
+}
+
+/*----RESPONSIVE----*/
+
+@media (min-width: 700px) {}
