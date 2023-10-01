@@ -88,7 +88,6 @@ section img {
 #container {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 200px auto 125px;
     grid-template-areas:
         "header"
         "main"
@@ -321,4 +320,32 @@ footer {
 
 /*----RESPONSIVE----*/
 
-@media (min-width: 700px) {}
+@media (min-width: 576px) {
+    body, p, input, h1, h2, h3, .main__form{
+        font-size: 1.2rem;
+    }
+
+    #nombreLogo{
+        font-size: calc(35px* 1.2);
+    }
+}
+
+@media (min-width: 768px) {
+    body, p, input, h1, h2, h3, .main__form{
+        font-size: 1.3rem;
+    }
+
+    #nombreLogo{
+        font-size: calc(35px* 1.3);
+    }
+}
+
+@media (min-width: 992px) {
+    body, p, input, h1, h2, h3, .main__form{
+        font-size: 1.4rem;
+    }
+
+    #nombreLogo{
+        font-size: calc(35px* 1.4);
+    }
+}
