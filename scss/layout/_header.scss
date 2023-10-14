@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        "logo"
+        "nombreLogo"
+        "menu";
+    justify-items: center;
+    align-items: center;
+
+    img {
+        width: 100px;
+        grid-area: logo;
+    }
+
+    .header__nombreLogo {
+        grid-area: nombreLogo;
+    }
+
+    nav {
+        grid-area: menu;
+        width: 100%;
+        justify-content: space-around;
+        padding: 0px 10px 0px 10px;
+        background-color: $ColorPrimario;
+        height: 100%;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        a {
+            text-decoration: none;
+            padding: 10px 8px 10px 8px;
+            color: $ColorPrimarioTexto;
+            border-bottom: 2px solid $ColorPrimario;
+            font-weight: 500;
+    
+            &:hover {
+                border: none;
+                border-bottom: 2px solid $ColorSecundario;
+                color: $ColorSecundario;
+                font-weight: 500;
+            }
+        }
+    }    
+}

@@ -1,0 +1,75 @@
+/*----RESPONSIVE----*/
+
+@media (min-width: 576px) {
+    body, p, input, h1, h2, h3, .main__form{
+        font-size: 1.2rem;
+    }
+
+    #nombreLogo{
+        font-size: calc(35px* 1.2);
+    }
+}
+
+@media (min-width: 768px) {
+    body, p, input, h1, h2, h3{
+        font-size: 1.4rem;
+    }
+
+    #nombreLogo{
+        font-size: calc(35px* 1.4);
+    }
+
+    .main__form{
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 992px) {
+    body, p, input, h1, h2, h3, .main__form{
+        font-size: 1.5rem;
+    }
+
+    #nombreLogo{
+        font-size: calc(35px* 1.5);
+    }
+
+    #main--plantas, #main--semillas{    
+        .main__div--cards{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "card1 card2 card3"
+                "card4 card5 card6";
+            gap: 10px; 
+            margin: 40px 100px 40px 100px;
+          
+            @for $i from 1 through 6 {
+                .card#{$i} {
+                    grid-area: unquote("card#{$i}");
+                    border: 2px solid lightgray;
+                    border-radius: 30px;
+    
+                    display: grid;
+                    grid-template-rows: 2fr, 1fr;
+                    grid-template-areas:
+                        "imagenCard"
+                        "textoCard";
+    
+                    .img_card{
+                        grid-area: imagenCard;
+                        padding: 20px;
+                        border-radius: 30px;
+                        width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+                        /* Ajusta el alto al 50% del tamaño de la celda */
+                    }
+    
+                    .card-body{
+                        grid-area: textoCard;
+                        padding: 20px;
+                    }
+                }             
+            }        
+        }
+    }
+    
+}

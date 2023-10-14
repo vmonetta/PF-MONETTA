@@ -1,1 +1,5 @@
 #Agregar archivos y carpetas a ignorar
+js/
+assets/fonts
+assets/videos
+css/bootstrap.min.css

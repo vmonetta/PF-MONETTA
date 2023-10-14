@@ -1,351 +1,527 @@
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Sacramento&display=swap');
-
-/*--------------------ESTILOS GENERALES--------------------*/
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Oswald';
-    font-size: 12px;
-}
-
-/*Estilo de lista sin viñetas*/
-ul {
-    list-style: none;
-}
-
-/*Estilo de párrafo*/
-p {
-    font-family: 'Assistant';
-    font-size: 10px;
-    /*"Peso" de la fuente (grosor del texto)*/
-    font-weight: 300;
-    margin-top: 0%;
-}
-
-a {
-    text-decoration: none;
-    padding: 10px 8px 10px 8px;
-    color: rgb(0, 0, 0);
-    border-bottom: 2px solid rgb(224, 249, 198);
-    font-weight: 500;
-}
-
-a:hover {
-    border: none;
-    border-bottom: 2px solid rgb(115, 156, 71);
-    color: rgb(115, 156, 71);
-    font-weight: 500;
-}
-
-input {
-    font-family: 'Assistant';
-    font-size: 10px;
-}
-
-#boton {
-    background-color: rgb(224, 249, 198);
-    color: rgb(115, 156, 71);
-    border: 2px solid rgb(115, 156, 71);
-    font-weight: 500;
-}
-
-#boton:hover {
-    border: 2px solid rgb(115, 156, 71);
-    background-color: rgb(115, 156, 71);
-    color: rgb(224, 249, 198);
-    font-weight: 500;
-}
-
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Sacramento&display=swap");
 /*Estilo de texto h1*/
 h1 {
-    margin-bottom: 0%;
-    font-size: 14px;
+  margin-bottom: 0%;
+  font-size: 14px;
 }
 
 /*Estilo de texto h2*/
 h2 {
-    margin-top: 0%;
-    font-size: 12px;
-    font-weight: 500;
+  margin-top: 0%;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 /*Estilo de texto h3*/
 h3 {
-    margin-bottom: 0%;
+  margin-bottom: 0%;
 }
 
-section img {
-    width: 100%;
-    grid-area: imagen;
-    
+/*Estilo de párrafo*/
+p {
+  font-family: "Assistant";
+  font-size: 10px;
+  /*"Peso" de la fuente (grosor del texto)*/
+  font-weight: 300;
+  margin-top: 0%;
 }
 
-/*--------------------MOBILE--------------------*/
-#container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-        "header"
-        "main"
-        "footer";
+.header__nombreLogo {
+  font-family: "Sacramento";
+  font-size: 35px;
+  text-align: center;
 }
 
-/*--------------------ESTILOS POR BLOQUE--------------------*/
-/*----HEADER----*/
+.main__form {
+  font-family: "Assistant";
+  font-size: 10px;
+  font-weight: 300;
+  justify-content: center;
+}
+
+input {
+  font-family: "Assistant";
+  font-size: 10px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas:
-        "logo"
-        "nombreLogo"
-        "menu";
-    justify-items: center;
-    align-items: center;
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "logo" "nombreLogo" "menu";
+  justify-items: center;
+  align-items: center;
 }
-
 header img {
-    width: 100px;
-    grid-area: logo;
+  width: 100px;
+  grid-area: logo;
+}
+header .header__nombreLogo {
+  grid-area: nombreLogo;
+}
+header nav {
+  grid-area: menu;
+  width: 100%;
+  justify-content: space-around;
+  padding: 0px 10px 0px 10px;
+  background-color: rgb(224, 249, 198);
+  height: 100%;
+  align-items: center;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+header nav a {
+  text-decoration: none;
+  padding: 10px 8px 10px 8px;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(224, 249, 198);
+  font-weight: 500;
+}
+header nav a:hover {
+  border: none;
+  border-bottom: 2px solid rgb(115, 156, 71);
+  color: rgb(115, 156, 71);
+  font-weight: 500;
 }
 
-#nombreLogo {
-    grid-area: nombreLogo;
-    font-family: 'Sacramento';
-    font-size: 35px;
-    text-align: center;
-}
-
-nav {
-    grid-area: menu;
-    width: 100%;
-    justify-content: space-around;
-    padding: 0px 10px 0px 10px;
-    background-color: rgb(224, 249, 198);
-    height: 100%;
-    align-items: center;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-/*----MAIN----*/
 /*INDEX*/
 .main--index {
-    grid-area: main;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /*grid-template-rows: 50% 50%;*/
-    grid-template-areas:
-        "bienvenida bienvenida"
-        "imagen cuadroSeccion";
+  grid-area: main;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "bienvenida bienvenida" "imagen cuadroSeccion";
+}
+.main--index .main__seccion--bienvenidaIndex {
+  grid-area: bienvenida;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  background-image: url("../assets/images/portada-index.jpg");
+  height: max-content;
+  background-size: auto;
+  padding: 20px;
+}
+.main--index .main__seccion--imagen {
+  width: 100%;
+  grid-area: imagen;
+}
+.main--index .main__seccion--cuadros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Estilos para los cuadros */
+}
+.main--index .main__seccion--cuadros .cuadro {
+  grid-area: cuadros;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+}
+.main--index .main__seccion--cuadros .cuadro:hover {
+  background-color: rgb(115, 156, 71);
+  color: rgb(224, 249, 198);
 }
 
-.main__seccion--bienvenidaIndex {
-    grid-area: bienvenida;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    background-image: url("../assets/images/portada-index.jpg");
-    height: max-content;
-    background-size: auto;
-    padding: 20px;
+/*PLANTAS y SEMILLAS*/
+#main--plantas .main__seccion--bienvenidaPlantas, #main--plantas .main__seccion--bienvenidaSemillas, #main--semillas .main__seccion--bienvenidaPlantas, #main--semillas .main__seccion--bienvenidaSemillas {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "texto1 texto2";
+  justify-content: baseline;
 }
-
-.main__seccion--cuadros {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#main--plantas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaPlantas--h1, #main--plantas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaSemillas--h1, #main--plantas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaPlantas--h1, #main--plantas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaSemillas--h1, #main--semillas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaPlantas--h1, #main--semillas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaSemillas--h1, #main--semillas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaPlantas--h1, #main--semillas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaSemillas--h1 {
+  grid-area: texto1;
+  text-align: right;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgb(0, 0, 0);
+  margin: 0px 0px 0px 100px;
 }
-
-/* Estilos para los cuadros */
-.cuadro {
-    grid-area: cuadros;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
+#main--plantas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaPlantas--h2, #main--plantas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaSemillas--h2, #main--plantas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaPlantas--h2, #main--plantas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaSemillas--h2, #main--semillas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaPlantas--h2, #main--semillas .main__seccion--bienvenidaPlantas .main__seccion--bienvenidaSemillas--h2, #main--semillas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaPlantas--h2, #main--semillas .main__seccion--bienvenidaSemillas .main__seccion--bienvenidaSemillas--h2 {
+  grid-area: texto2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 100px 0px 0px;
 }
-
-/*PLANTAS*/
-.main__seccion--bienvenidaPlantas{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas:
-        "texto1 texto2"
-        "blanco blanco";
-    justify-content: baseline;    
+#main--plantas .main__div--cards, #main--semillas .main__div--cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "card1 card2" "card3 card4" "card5 card6";
+  gap: 10px; /* Espacio entre las celdas */
+  margin: 20px 20px 20px 20px;
 }
-
-.main__seccion--bienvenidaPlantas--h1{
-    grid-area: texto1;
-    text-align: right;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 1px solid #000;
+#main--plantas .main__div--cards .card1, #main--semillas .main__div--cards .card1 {
+  grid-area: card1;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-template-areas: "imagenCard" "textoCard";
 }
-
-.main__seccion--bienvenidaPlantas--h2{
-    grid-area: texto2;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#main--plantas .main__div--cards .card1 .img_card, #main--semillas .main__div--cards .card1 .img_card {
+  grid-area: imagenCard;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
 }
-
-/*SEMILLAS*/
-.main__seccion--bienvenidaSemillas{
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2,1fr);
-    grid-template-areas:
-        "texto1 texto2"
-        "blanco blanco";
-    justify-content: baseline;    
+#main--plantas .main__div--cards .card1 .card-body, #main--semillas .main__div--cards .card1 .card-body {
+  grid-area: textoCard;
+  padding: 20px;
 }
-
-.main__seccion--bienvenidaSemillas--h1{
-    grid-area: texto1;
-    text-align: right;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-right: 1px solid #000;
+#main--plantas .main__div--cards .card2, #main--semillas .main__div--cards .card2 {
+  grid-area: card2;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-template-areas: "imagenCard" "textoCard";
 }
-
-.main__seccion--bienvenidaSemillas--h2{
-    grid-area: texto2;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+#main--plantas .main__div--cards .card2 .img_card, #main--semillas .main__div--cards .card2 .img_card {
+  grid-area: imagenCard;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+}
+#main--plantas .main__div--cards .card2 .card-body, #main--semillas .main__div--cards .card2 .card-body {
+  grid-area: textoCard;
+  padding: 20px;
+}
+#main--plantas .main__div--cards .card3, #main--semillas .main__div--cards .card3 {
+  grid-area: card3;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-template-areas: "imagenCard" "textoCard";
+}
+#main--plantas .main__div--cards .card3 .img_card, #main--semillas .main__div--cards .card3 .img_card {
+  grid-area: imagenCard;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+}
+#main--plantas .main__div--cards .card3 .card-body, #main--semillas .main__div--cards .card3 .card-body {
+  grid-area: textoCard;
+  padding: 20px;
+}
+#main--plantas .main__div--cards .card4, #main--semillas .main__div--cards .card4 {
+  grid-area: card4;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-template-areas: "imagenCard" "textoCard";
+}
+#main--plantas .main__div--cards .card4 .img_card, #main--semillas .main__div--cards .card4 .img_card {
+  grid-area: imagenCard;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+}
+#main--plantas .main__div--cards .card4 .card-body, #main--semillas .main__div--cards .card4 .card-body {
+  grid-area: textoCard;
+  padding: 20px;
+}
+#main--plantas .main__div--cards .card5, #main--semillas .main__div--cards .card5 {
+  grid-area: card5;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-template-areas: "imagenCard" "textoCard";
+}
+#main--plantas .main__div--cards .card5 .img_card, #main--semillas .main__div--cards .card5 .img_card {
+  grid-area: imagenCard;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+}
+#main--plantas .main__div--cards .card5 .card-body, #main--semillas .main__div--cards .card5 .card-body {
+  grid-area: textoCard;
+  padding: 20px;
+}
+#main--plantas .main__div--cards .card6, #main--semillas .main__div--cards .card6 {
+  grid-area: card6;
+  border: 2px solid lightgray;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-template-areas: "imagenCard" "textoCard";
+}
+#main--plantas .main__div--cards .card6 .img_card, #main--semillas .main__div--cards .card6 .img_card {
+  grid-area: imagenCard;
+  padding: 20px;
+  border-radius: 30px;
+  width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+}
+#main--plantas .main__div--cards .card6 .card-body, #main--semillas .main__div--cards .card6 .card-body {
+  grid-area: textoCard;
+  padding: 20px;
 }
 
 /*CONTACTO*/
 .main--contacto {
-    grid-area: main;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 100%;
-    /*grid-template-rows: 50% 50%;*/
-    grid-template-areas:
-        "bienvenida"
-        "form";
+  grid-area: main;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: 100%;
+  /*grid-template-rows: 50% 50%;*/
+  grid-template-areas: "bienvenida" "form";
 }
-
-.main__seccion--bienvenidaContacto {
-    grid-area: bienvenida;
-    color: rgb(255, 255, 255);
-    text-shadow: 2px 2px 4px #000;
-    text-align: center;
-    background-image: url("../assets/images/portada-contacto.jpg");
-    background-size: cover;
-    padding: 20px;
+.main--contacto .main__seccion--bienvenidaContacto {
+  grid-area: bienvenida;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  text-align: center;
+  background-image: url("../assets/images/portada-contacto.jpg");
+  background-size: cover;
+  padding: 20px;
 }
-
-.main__form {
-    grid-area: form;
-    display: flex;
-    flex-direction: column;
-    font-family: 'Assistant';
-    font-size: 10px;
-    font-weight: 300;
-    justify-content: center;
-    padding: 20px;
+.main--contacto .main__form {
+  grid-area: form;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.main--contacto .main__form #boton {
+  background-color: rgb(224, 249, 198);
+  color: rgb(115, 156, 71);
+  border: 2px solid rgb(115, 156, 71);
+  font-weight: 500;
+}
+.main--contacto .main__form #boton:hover {
+  border: 2px solid rgb(115, 156, 71);
+  background-color: rgb(115, 156, 71);
+  color: rgb(224, 249, 198);
+  font-weight: 500;
 }
 
 /*NOSOTROS*/
 .main--nosotros {
-    grid-area: main;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-areas:
-        "imagen texto"
-        "ubicacion ubicacion";
+  grid-area: main;
+  padding: 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "imagen texto" "ubicacion ubicacion";
+}
+.main--nosotros .main__seccion--imagen {
+  width: 100%;
+  grid-area: imagen;
+}
+.main--nosotros .main__seccion--parrafo {
+  grid-area: texto;
+  padding: 20px;
+}
+.main--nosotros .main__seccion--ubicacion {
+  grid-area: ubicacion;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
-.main__seccion--parrafo{
-    grid-area: texto;
-    padding: 20px;
-}
-
-.main__seccion--ubicacion{
-    grid-area: ubicacion;
-    height: 150px;
-    display: flex;
-    flex-direction: column;
-}
-/*---FOOTER---*/
 footer {
-    grid-area: footer;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  /*Estilo de datos de contacto*/
+}
+footer .footer__seccion--infoContacto {
+  background-color: rgb(224, 249, 198);
+  width: 100%;
+  text-align: center;
+  /*padding: 15px 15px 15px 15px;*/
+  color: rgb(92, 91, 91);
+  /*Estilo de lista sin viñetas*/
+}
+footer .footer__seccion--infoContacto ul {
+  list-style: none;
+}
+footer .footer__seccion--infoContacto #infoContacto {
+  padding: 15px 15px 15px 15px;
+  margin: 0;
+}
+footer .footer__seccion--copyright {
+  width: 100%;
+  background-color: rgb(224, 249, 198);
+  text-align: center;
+  padding: 15px 15px 15px 15px;
+  color: rgb(92, 91, 91);
 }
 
-/*Estilo de datos de contacto*/
-.footer__seccion--infoContacto {
-    background-color: rgb(224, 249, 198);
-    width: 100%;
-    text-align: center;
-    /*padding: 15px 15px 15px 15px;*/
-    color: rgb(92, 91, 91);
+body {
+  font-family: "Oswald";
+  font-size: 12px;
 }
-
-#infoContacto {
-    padding: 15px 15px 15px 15px;
-    margin: 0;
-}
-
-/*Estilo de copyright*/
-.footer__seccion--copyright {
-    width: 100%;
-    background-color: rgb(224, 249, 198);
-    text-align: center;
-    padding: 15px 15px 15px 15px;
-    color: rgb(92, 91, 91);
+body #container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-areas: "header" "main" "footer";
 }
 
 /*----RESPONSIVE----*/
-
 @media (min-width: 576px) {
-    body, p, input, h1, h2, h3, .main__form{
-        font-size: 1.2rem;
-    }
-
-    #nombreLogo{
-        font-size: calc(35px* 1.2);
-    }
+  body, p, input, h1, h2, h3, .main__form {
+    font-size: 1.2rem;
+  }
+  #nombreLogo {
+    font-size: 42px;
+  }
 }
-
 @media (min-width: 768px) {
-    body, p, input, h1, h2, h3, .main__form{
-        font-size: 1.3rem;
-    }
-
-    #nombreLogo{
-        font-size: calc(35px* 1.3);
-    }
+  body, p, input, h1, h2, h3 {
+    font-size: 1.4rem;
+  }
+  #nombreLogo {
+    font-size: 49px;
+  }
+  .main__form {
+    font-size: 1.4rem;
+  }
 }
-
 @media (min-width: 992px) {
-    body, p, input, h1, h2, h3, .main__form{
-        font-size: 1.4rem;
-    }
-
-    #nombreLogo{
-        font-size: calc(35px* 1.4);
-    }
+  body, p, input, h1, h2, h3, .main__form {
+    font-size: 1.5rem;
+  }
+  #nombreLogo {
+    font-size: 52.5px;
+  }
+  #main--plantas .main__div--cards, #main--semillas .main__div--cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "card1 card2 card3" "card4 card5 card6";
+    gap: 10px;
+    margin: 40px 100px 40px 100px;
+  }
+  #main--plantas .main__div--cards .card1, #main--semillas .main__div--cards .card1 {
+    grid-area: card1;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-template-areas: "imagenCard" "textoCard";
+  }
+  #main--plantas .main__div--cards .card1 .img_card, #main--semillas .main__div--cards .card1 .img_card {
+    grid-area: imagenCard;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+    /* Ajusta el alto al 50% del tamaño de la celda */
+  }
+  #main--plantas .main__div--cards .card1 .card-body, #main--semillas .main__div--cards .card1 .card-body {
+    grid-area: textoCard;
+    padding: 20px;
+  }
+  #main--plantas .main__div--cards .card2, #main--semillas .main__div--cards .card2 {
+    grid-area: card2;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-template-areas: "imagenCard" "textoCard";
+  }
+  #main--plantas .main__div--cards .card2 .img_card, #main--semillas .main__div--cards .card2 .img_card {
+    grid-area: imagenCard;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+    /* Ajusta el alto al 50% del tamaño de la celda */
+  }
+  #main--plantas .main__div--cards .card2 .card-body, #main--semillas .main__div--cards .card2 .card-body {
+    grid-area: textoCard;
+    padding: 20px;
+  }
+  #main--plantas .main__div--cards .card3, #main--semillas .main__div--cards .card3 {
+    grid-area: card3;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-template-areas: "imagenCard" "textoCard";
+  }
+  #main--plantas .main__div--cards .card3 .img_card, #main--semillas .main__div--cards .card3 .img_card {
+    grid-area: imagenCard;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+    /* Ajusta el alto al 50% del tamaño de la celda */
+  }
+  #main--plantas .main__div--cards .card3 .card-body, #main--semillas .main__div--cards .card3 .card-body {
+    grid-area: textoCard;
+    padding: 20px;
+  }
+  #main--plantas .main__div--cards .card4, #main--semillas .main__div--cards .card4 {
+    grid-area: card4;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-template-areas: "imagenCard" "textoCard";
+  }
+  #main--plantas .main__div--cards .card4 .img_card, #main--semillas .main__div--cards .card4 .img_card {
+    grid-area: imagenCard;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+    /* Ajusta el alto al 50% del tamaño de la celda */
+  }
+  #main--plantas .main__div--cards .card4 .card-body, #main--semillas .main__div--cards .card4 .card-body {
+    grid-area: textoCard;
+    padding: 20px;
+  }
+  #main--plantas .main__div--cards .card5, #main--semillas .main__div--cards .card5 {
+    grid-area: card5;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-template-areas: "imagenCard" "textoCard";
+  }
+  #main--plantas .main__div--cards .card5 .img_card, #main--semillas .main__div--cards .card5 .img_card {
+    grid-area: imagenCard;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+    /* Ajusta el alto al 50% del tamaño de la celda */
+  }
+  #main--plantas .main__div--cards .card5 .card-body, #main--semillas .main__div--cards .card5 .card-body {
+    grid-area: textoCard;
+    padding: 20px;
+  }
+  #main--plantas .main__div--cards .card6, #main--semillas .main__div--cards .card6 {
+    grid-area: card6;
+    border: 2px solid lightgray;
+    border-radius: 30px;
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-template-areas: "imagenCard" "textoCard";
+  }
+  #main--plantas .main__div--cards .card6 .img_card, #main--semillas .main__div--cards .card6 .img_card {
+    grid-area: imagenCard;
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+    /* Ajusta el alto al 50% del tamaño de la celda */
+  }
+  #main--plantas .main__div--cards .card6 .card-body, #main--semillas .main__div--cards .card6 .card-body {
+    grid-area: textoCard;
+    padding: 20px;
+  }
 }
+
+/*# sourceMappingURL=style.css.map */

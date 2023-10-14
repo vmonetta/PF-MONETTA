@@ -4,13 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Amplia variedad de plantas, semillas y servicios en nuestro vivero. Ofrecemos plantas nacionales e importadas, asesoramiento experto y decoración para eventos." />
+    <meta name="keywords" content="vivero, plantas, semillas, jardinería, plantas nacionales, plantas importadas, paisajismo, decoración de jardines, asesoramiento de jardinería, flores, árboles, arbustos">
     <link rel="shortcut icon" href="./assets/images/flor-de-loto.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Incluye el CSS de Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Incluye el CSS de Bootstrap -->
+    <link rel="stylesheet" href="ruta-al-css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Vivero Loto</title>
 </head>
 
-<body>
+<body> 
     <div id="container">
         <header class="header">
             <img class="header__imagenLogo" src="./assets/images/flor-de-loto.png" alt="Logo">
@@ -27,27 +32,27 @@
 
         <main class="main--index">
             <section class="main__seccion--bienvenidaIndex">
-                <h1>¡BIENVENIDO A NUESTRO VIVERO!</h1>
+                <h1 class="animate__animated animate__backInLeft">¡BIENVENIDO A NUESTRO VIVERO!</h1>
                 <h2>No dudes en visitarnos</h2>
             </section>
 
             <section class="main__seccion--imagen">
-                <img src="./assets/images/index-imagen1.jpg" alt="Plantas varias">
+                <img id="imagenIndex" class="main__seccion--imagen" src="./assets/images/index-imagen1.jpg" alt="Plantas varias">
             </section>
 
             <section class="main__seccion--cuadros">
                 <div id="articulo1" class="cuadro">
                     <!--<img src="./assets/images/index-imagen1.jpg" alt="Plantas varias">-->
-                    <p>1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod mollitia vero expedita. Perferendis numquam atque at tenetur veritatis eum harum, quae cum eius amet quod?</p>
+                    <p>1. Contamos con una extensa variedad de especies vegetales, desde árboles y arbustos hasta plantas herbáceas y flores, ofreciéndote una amplia diversidad en esta categoría.</p>
                 </div>
                 <div id="articulo2" class="cuadro">
-                    <p>2. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero accusantium nemo laudantium inventore vel. Amet eum nisi totam non, beatae ullam iure explicabo tempore rerum maiores blanditiis dolorem pariatur animi!</p>
+                    <p>2. Tenemos a nuestra disposición una variada selección de flores tanto locales como internacionales, ideales para regalos informales o para embellecer bodas y eventos especiales.</p>
                 </div>
                 <div id="articulo3" class="cuadro">
-                    <p>3. Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ipsum quas vero voluptate dolorem sit!</elit></p>
+                    <p>3. Realizamos proyectos paisajísticos de calidad y proveemos a desarrollistas. Resolvemos grandes obras así como pequeños jardines.</elit></p>
                 </div>
                 <div id="articulo4" class="cuadro">
-                    <p>4. Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <p>4. Ofrecemos una amplia selección de accesorios, incluyendo productos como artículos decorativos artificiales, jardines verticales, macetas y mucho más. Estamos aquí para brindarte asesoramiento, ¡no dudes en consultarnos!</p>
                 </div>
             </section>
 
@@ -65,7 +70,9 @@
         </footer>
 
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- Incluye el JavaScript de Bootstrap (jQuery es requerido) -->
+    <script src="ruta-al-js/jquery.min.js"></script>
+    <script src="ruta-al-js/bootstrap.min.js"></script>
 </body>
 
 </html>

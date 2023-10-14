@@ -1,0 +1,185 @@
+
+/*INDEX*/
+.main--index {
+    grid-area: main;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+        "bienvenida bienvenida"
+        "imagen cuadroSeccion";
+
+    .main__seccion--bienvenidaIndex {
+        grid-area: bienvenida;
+        color: $ColorPrimarioTexto;
+        text-align: center;
+        background-image: url("../assets/images/portada-index.jpg");
+        height: max-content;
+        background-size: auto;
+        padding: 20px;
+    }
+
+    .main__seccion--imagen {
+        width: 100%;
+        grid-area: imagen;
+    }
+
+    .main__seccion--cuadros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /* Estilos para los cuadros */
+        .cuadro {
+            grid-area: cuadros;
+            margin: auto;
+            padding: 10px;
+            text-align: center;
+
+            &:hover{
+                background-color: $ColorSecundario;
+                color: $ColorPrimario;
+            }
+        }
+    }
+}
+
+/*PLANTAS y SEMILLAS*/
+#main--plantas, #main--semillas{
+    .main__seccion--bienvenidaPlantas, .main__seccion--bienvenidaSemillas{
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "texto1 texto2";
+        justify-content: baseline;  
+        
+        .main__seccion--bienvenidaPlantas--h1, .main__seccion--bienvenidaSemillas--h1{
+            grid-area: texto1;
+            text-align: right;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 1px solid $ColorPrimarioTexto;
+            margin: 0px 0px 0px 100px;
+        }
+        
+        .main__seccion--bienvenidaPlantas--h2, .main__seccion--bienvenidaSemillas--h2{
+            grid-area: texto2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0px 100px 0px 0px;
+        }
+    }
+
+    .main__div--cards{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6";
+        gap: 10px; /* Espacio entre las celdas */
+        margin: 20px 20px 20px 20px;
+
+        @for $i from 1 through 6 {
+            .card#{$i} {
+                grid-area: unquote("card#{$i}");
+                border: 2px solid lightgray;
+                border-radius: 30px;
+
+                display: grid;
+                grid-template-rows: 2fr, 1fr;
+                grid-template-areas:
+                    "imagenCard"
+                    "textoCard";
+
+                .img_card{
+                    grid-area: imagenCard;
+                    padding: 20px;
+                    border-radius: 30px;
+                    width: 100%; /* Ajusta el ancho al 100% del tamaño de la celda */
+                }
+
+                .card-body{
+                    grid-area: textoCard;
+                    padding: 20px;
+                }
+            }             
+        }        
+    }
+}
+
+/*CONTACTO*/
+.main--contacto {
+    grid-area: main;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 100%;
+    /*grid-template-rows: 50% 50%;*/
+    grid-template-areas:
+        "bienvenida"
+        "form";
+
+    .main__seccion--bienvenidaContacto {
+        grid-area: bienvenida;
+        color: $ColorSecundarioTexto;
+        text-shadow: 2px 2px 4px $ColorPrimarioTexto;
+        text-align: center;
+        background-image: url("../assets/images/portada-contacto.jpg");
+        background-size: cover;
+        padding: 20px;
+    }
+       
+    .main__form {
+        grid-area: form;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        
+        #boton {
+            background-color: $ColorPrimario;
+            color: $ColorSecundario;
+            border: 2px solid $ColorSecundario;
+            font-weight: 500;
+        }
+        
+        #boton:hover {
+            border: 2px solid $ColorSecundario;
+            background-color: $ColorSecundario;
+            color: $ColorPrimario;
+            font-weight: 500;
+        }
+    }      
+}
+
+/*NOSOTROS*/
+.main--nosotros {
+    grid-area: main;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas:
+        "imagen texto"
+        "ubicacion ubicacion";
+
+    .main__seccion--imagen {
+        width: 100%;
+        grid-area: imagen;
+    }
+
+    .main__seccion--parrafo{
+        grid-area: texto;
+        padding: 20px;
+    }
+        
+    .main__seccion--ubicacion{
+        grid-area: ubicacion; 
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+    }
+}

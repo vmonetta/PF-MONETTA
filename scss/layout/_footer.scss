@@ -1,0 +1,33 @@
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    /*Estilo de datos de contacto*/
+    .footer__seccion--infoContacto {
+        background-color: rgb(224, 249, 198);
+        width: 100%;
+        text-align: center;
+        /*padding: 15px 15px 15px 15px;*/
+        color: rgb(92, 91, 91);
+
+        /*Estilo de lista sin viñetas*/
+        ul {
+            list-style: none;
+        }
+
+        #infoContacto {
+            padding: 15px 15px 15px 15px;
+            margin: 0;
+        }
+    }
+
+    .footer__seccion--copyright {
+        width: 100%;
+        background-color: rgb(224, 249, 198);
+        text-align: center;
+        padding: 15px 15px 15px 15px;
+        color: rgb(92, 91, 91);
+    }
+}
